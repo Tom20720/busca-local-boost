@@ -189,7 +189,7 @@ const Index = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
               <div>
-                <h4 ClassName="font-semibold text-gray-900 mb-3">🎯 Conhecimento Local</h4>
+                <h4 className="font-semibold text-gray-900 mb-3">🎯 Conhecimento Local</h4>
                 <p className="text-gray-600 mb-4">
                   Especialistas que vivem e trabalham em Guarulhos, conhecendo as particularidades 
                   do mercado local e regional.
