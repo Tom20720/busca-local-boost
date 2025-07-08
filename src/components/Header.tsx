@@ -15,7 +15,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/f5ba5ef1-9386-4094-b72d-86626a07794a.png" 
               alt="Busca Local Pro - SEO Local em Guarulhos" 
-              className="h-10 w-auto"
+              className="h-12 w-auto"
             />
             <span className="text-2xl font-bold text-primary-800">
               Busca Local Pro
