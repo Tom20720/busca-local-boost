@@ -29,9 +29,6 @@ const Header = () => {
             <Link to="/sobre" className="text-gray-700 hover:text-primary-800 font-medium transition-colors">
               Sobre
             </Link>
-            <Link to="/depoimentos" className="text-gray-700 hover:text-primary-800 font-medium transition-colors">
-              Depoimentos
-            </Link>
             <Link to="/contato">
               <Button className="bg-primary-800 hover:bg-primary-900 text-white">
                 Contato
@@ -64,9 +61,6 @@ const Header = () => {
               </Link>
               <Link to="/sobre" className="text-gray-700 hover:text-primary-800 font-medium">
                 Sobre
-              </Link>
-              <Link to="/depoimentos" className="text-gray-700 hover:text-primary-800 font-medium">
-                Depoimentos
               </Link>
               <Link to="/contato" className="text-gray-700 hover:text-primary-800 font-medium">
                 Contato
