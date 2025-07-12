@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -9,7 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail, Star, CheckCircle, Clock, Award } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -23,14 +24,14 @@ const Contact = () => {
     setTimeout(() => {
       toast({
         title: "Mensagem enviada com sucesso!",
-        description: "Entraremos em contato em até 24 horas para agendar sua consultoria gratuita em Guarulhos.",
+        description: "Entraremos em contato em até 2 horas para mostrar como melhorar sua empresa no Google!",
       });
       setIsSubmitting(false);
     }, 1000);
   };
 
   const whatsappMessage = encodeURIComponent(
-    "Olá! Gostaria de saber mais sobre os serviços de SEO Local da Busca Local Pro em Guarulhos. Podem me ajudar a melhorar minha presença online?"
+    "Olá! Quero saber como melhorar minha empresa no Google com a Busca Local Pro Agência de SEO em Guarulhos. Podem me ajudar?"
   );
 
   return (
@@ -43,49 +44,63 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Consultoria SEO Local Presencial em Guarulhos
+              Como Melhorar Minha Empresa no Google: Consultoria Gratuita
             </h1>
             <p className="text-xl mb-8 text-blue-100">
-              Especialistas locais de Guarulhos prontos para alavancar sua presença digital e dominar o Google
+              Busca Local Pro Agência de SEO em Guarulhos SP - Especialistas em posicionamento no Google
             </p>
           </div>
         </div>
       </section>
 
-      {/* NAP Section */}
+      {/* NAP Section - Updated */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold text-center text-gray-900 mb-8">Nossa Localização em Guarulhos</h2>
+            <h2 className="text-2xl font-bold text-center text-gray-900 mb-8">
+              Busca Local Pro Agência de SEO - Guarulhos SP
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Card className="text-center">
                 <CardContent className="p-6">
                   <MapPin className="h-8 w-8 text-primary-800 mx-auto mb-4" />
-                  <h3 className="font-semibold text-gray-900 mb-2">Endereço</h3>
-                  <p className="text-gray-600">Busca Local Pro</p>
-                  <p className="text-gray-600">Rua das Palmeiras, 123</p>
-                  <p className="text-gray-600">Centro, Guarulhos - SP</p>
-                  <p className="text-gray-600">CEP: 07010-000</p>
+                  <h3 className="font-semibold text-gray-900 mb-2">Nosso Endereço</h3>
+                  <p className="text-gray-600 font-semibold">Busca Local Pro Agência de SEO</p>
+                  <p className="text-gray-600">Rua Brejo Grande, 280</p>
+                  <p className="text-gray-600">CEP: 07273-180</p>
+                  <p className="text-gray-600">Guarulhos/SP</p>
                 </CardContent>
               </Card>
               
               <Card className="text-center">
                 <CardContent className="p-6">
                   <Phone className="h-8 w-8 text-primary-800 mx-auto mb-4" />
-                  <h3 className="font-semibold text-gray-900 mb-2">Telefone</h3>
-                  <p className="text-gray-600">(11) 99999-9999</p>
-                  <p className="text-gray-600">WhatsApp disponível</p>
-                  <p className="text-gray-600">Seg à Sex: 8h às 18h</p>
+                  <h3 className="font-semibold text-gray-900 mb-2">Telefone e WhatsApp</h3>
+                  <p className="text-gray-600 font-semibold">(11) 91376-9295</p>
+                  <a 
+                    href={`https://wa.me/5511913769295?text=${whatsappMessage}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent-600 hover:text-accent-700 text-sm block mt-1"
+                  >
+                    Clique para WhatsApp
+                  </a>
+                  <p className="text-gray-600 text-sm">Seg à Sex: 8h às 18h</p>
                 </CardContent>
               </Card>
               
               <Card className="text-center">
                 <CardContent className="p-6">
                   <Mail className="h-8 w-8 text-primary-800 mx-auto mb-4" />
-                  <h3 className="font-semibold text-gray-900 mb-2">E-mail</h3>
-                  <p className="text-gray-600">contato@buscalocalpro.com.br</p>
-                  <p className="text-gray-600">Resposta em até 24h</p>
-                  <p className="text-gray-600">Consultoria gratuita</p>
+                  <h3 className="font-semibold text-gray-900 mb-2">E-mail Comercial</h3>
+                  <a 
+                    href="mailto:comercial@buscalocalpro.com.br"
+                    className="text-gray-600 hover:text-primary-800 font-semibold"
+                  >
+                    comercial@buscalocalpro.com.br
+                  </a>
+                  <p className="text-gray-600 text-sm mt-1">Resposta em até 2h</p>
+                  <p className="text-gray-600 text-sm">Consultoria gratuita</p>
                 </CardContent>
               </Card>
             </div>
@@ -99,43 +114,30 @@ const Contact = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12">
               
-              {/* Contact Form */}
+              {/* Contact Form - Optimized as requested */}
               <div>
                 <Card>
                   <CardHeader>
                     <CardTitle className="text-2xl text-primary-800">
-                      Consultoria SEO Gratuita em Guarulhos
+                      Descubra Como Melhorar Sua Empresa no Google - Grátis
                     </CardTitle>
                     <p className="text-gray-600">
-                      Preencha o formulário e receba uma análise personalizada 
-                      da sua presença online com especialistas locais de Guarulhos.
+                      Preencha o formulário e receba uma consultoria personalizada sobre como melhorar 
+                      sua empresa no Google com nossa equipe especializada em Guarulhos.
                     </p>
                   </CardHeader>
                   <CardContent>
                     <form onSubmit={handleSubmit} className="space-y-6">
                       
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <div>
-                          <Label htmlFor="name">Nome completo *</Label>
-                          <Input 
-                            id="name" 
-                            name="name"
-                            required
-                            placeholder="Seu nome completo"
-                            className="mt-1"
-                          />
-                        </div>
-                        <div>
-                          <Label htmlFor="phone">Telefone/WhatsApp *</Label>
-                          <Input 
-                            id="phone" 
-                            name="phone"
-                            type="tel"
-                            required
-                            placeholder="(11) 99999-9999"
-                            className="mt-1"
-                          />
-                        </div>
+                      <div>
+                        <Label htmlFor="name">Nome completo *</Label>
+                        <Input 
+                          id="name" 
+                          name="name"
+                          required
+                          placeholder="Seu nome completo"
+                          className="mt-1"
+                        />
                       </div>
 
                       <div>
@@ -150,86 +152,44 @@ const Contact = () => {
                         />
                       </div>
 
-                      <div className="grid md:grid-cols-2 gap-4">
-                        <div>
-                          <Label htmlFor="business">Nome da empresa *</Label>
-                          <Input 
-                            id="business" 
-                            name="business"
-                            required
-                            placeholder="Nome do seu negócio"
-                            className="mt-1"
-                          />
-                        </div>
-                        <div>
-                          <Label htmlFor="segment">Segmento de atuação *</Label>
-                          <Select name="segment" required>
-                            <SelectTrigger className="mt-1">
-                              <SelectValue placeholder="Selecione seu segmento" />
-                            </SelectTrigger>
-                            <SelectContent>
-                              <SelectItem value="restaurante">Restaurante/Gastronomia</SelectItem>
-                              <SelectItem value="saude">Saúde/Medicina</SelectItem>
-                              <SelectItem value="juridico">Jurídico/Advocacia</SelectItem>
-                              <SelectItem value="estetica">Beleza/Estética</SelectItem>
-                              <SelectItem value="contabilidade">Contabilidade</SelectItem>
-                              <SelectItem value="servicos">Serviços Gerais</SelectItem>
-                              <SelectItem value="comercio">Comércio/Varejo</SelectItem>
-                              <SelectItem value="outros">Outros</SelectItem>
-                            </SelectContent>
-                          </Select>
-                        </div>
+                      <div>
+                        <Label htmlFor="phone">Telefone *</Label>
+                        <Input 
+                          id="phone" 
+                          name="phone"
+                          type="tel"
+                          required
+                          placeholder="(11) 99999-9999"
+                          className="mt-1"
+                        />
                       </div>
 
                       <div>
-                        <Label htmlFor="city">Cidade onde atua *</Label>
+                        <Label htmlFor="city">Cidade e Estado *</Label>
                         <Input 
                           id="city" 
                           name="city"
                           required
-                          placeholder="Guarulhos, São Paulo, etc."
+                          placeholder="Ex: Guarulhos, São Paulo"
                           className="mt-1"
                         />
                       </div>
 
                       <div>
-                        <Label htmlFor="website">Site atual (se tiver)</Label>
-                        <Input 
-                          id="website" 
-                          name="website"
-                          type="url"
-                          placeholder="https://seusite.com.br"
-                          className="mt-1"
-                        />
-                      </div>
-
-                      <div>
-                        <Label htmlFor="challenge">Qual seu maior desafio atual? *</Label>
-                        <Select name="challenge" required>
+                        <Label htmlFor="subject">Assunto *</Label>
+                        <Select name="subject" required>
                           <SelectTrigger className="mt-1">
-                            <SelectValue placeholder="Selecione seu principal desafio" />
+                            <SelectValue placeholder="Selecione o assunto" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="nao-apareco">Não apareço no Google</SelectItem>
-                            <SelectItem value="poucos-clientes">Poucos clientes me encontram online</SelectItem>
-                            <SelectItem value="concorrencia">Concorrência aparece antes de mim</SelectItem>
-                            <SelectItem value="google-maps">Não apareço no Google Maps</SelectItem>
-                            <SelectItem value="reviews">Poucas avaliações/reviews</SelectItem>
-                            <SelectItem value="site-antigo">Site desatualizado</SelectItem>
-                            <SelectItem value="outros">Outros desafios</SelectItem>
+                            <SelectItem value="como-melhorar-google">Como melhorar minha empresa no Google</SelectItem>
+                            <SelectItem value="seo-local">SEO Local para minha empresa</SelectItem>
+                            <SelectItem value="google-business">Otimização Google Business Profile</SelectItem>
+                            <SelectItem value="consultoria">Consultoria SEO completa</SelectItem>
+                            <SelectItem value="site-novo">Criação de site otimizado</SelectItem>
+                            <SelectItem value="outros">Outros serviços</SelectItem>
                           </SelectContent>
                         </Select>
-                      </div>
-
-                      <div>
-                        <Label htmlFor="message">Mensagem adicional</Label>
-                        <Textarea 
-                          id="message" 
-                          name="message"
-                          placeholder="Conte-nos mais sobre seu negócio e seus objetivos em Guarulhos..."
-                          className="mt-1"
-                          rows={4}
-                        />
                       </div>
 
                       <Button 
@@ -237,7 +197,7 @@ const Contact = () => {
                         className="w-full bg-primary-800 hover:bg-primary-900 text-white text-lg py-3"
                         disabled={isSubmitting}
                       >
-                        {isSubmitting ? "Enviando..." : "Solicitar Consultoria Gratuita"}
+                        {isSubmitting ? "Enviando..." : "Quero Melhorar Minha Empresa no Google"}
                       </Button>
 
                       <p className="text-sm text-gray-500 text-center">
@@ -255,25 +215,24 @@ const Contact = () => {
                 <Card className="bg-secondary-600 text-white">
                   <CardContent className="p-6 text-center">
                     <h3 className="text-2xl font-bold mb-4">
-                      Atendimento WhatsApp Guarulhos
+                      WhatsApp Direto - Guarulhos SP
                     </h3>
                     <p className="mb-6">
-                      Fale agora com especialistas locais de Guarulhos e tire todas as suas dúvidas 
-                      sobre SEO local e Google Business Profile
+                      Fale agora com nossa equipe especializada e descubra como melhorar sua empresa 
+                      no Google de forma rápida e eficaz. Atendimento personalizado em Guarulhos.
                     </p>
                     <a 
-                      href={`https://wa.me/5511999999999?text=${whatsappMessage}`}
+                      href={`https://wa.me/5511913769295?text=${whatsappMessage}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <Button size="lg" className="bg-white text-secondary-600 hover:bg-gray-100">
-                        Chamar no WhatsApp
+                        Chamar no WhatsApp (11) 91376-9295
                       </Button>
                     </a>
                   </CardContent>
                 </Card>
 
-                
                 <Card>
                   <CardHeader>
                     <CardTitle className="text-xl text-primary-800">
@@ -283,27 +242,27 @@ const Contact = () => {
                   <CardContent>
                     <ul className="space-y-3">
                       <li className="flex items-start">
-                        <span className="text-secondary-600 mr-3">✓</span>
-                        <span><strong>Análise completa</strong> da sua presença online atual</span>
+                        <CheckCircle className="h-5 w-5 text-secondary-600 mr-3 mt-1" />
+                        <span><strong>Análise completa</strong> de como melhorar sua empresa no Google</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-secondary-600 mr-3">✓</span>
-                        <span><strong>Auditoria do Google Business Profile</strong> focada em Guarulhos</span>
+                        <CheckCircle className="h-5 w-5 text-secondary-600 mr-3 mt-1" />
+                        <span><strong>Auditoria gratuita</strong> do seu Google Business Profile</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-secondary-600 mr-3">✓</span>
+                        <CheckCircle className="h-5 w-5 text-secondary-600 mr-3 mt-1" />
                         <span><strong>Análise da concorrência</strong> local em Guarulhos</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-secondary-600 mr-3">✓</span>
+                        <CheckCircle className="h-5 w-5 text-secondary-600 mr-3 mt-1" />
+                        <span><strong>Plano estratégico personalizado</strong> para sua empresa</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-secondary-600 mr-3 mt-1" />
                         <span><strong>Identificação das melhores oportunidades</strong> de SEO local</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-secondary-600 mr-3">✓</span>
-                        <span><strong>Plano estratégico personalizado</strong> para Guarulhos</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="text-secondary-600 mr-3">✓</span>
+                        <CheckCircle className="h-5 w-5 text-secondary-600 mr-3 mt-1" />
                         <span><strong>Reunião presencial</strong> em nosso escritório (opcional)</span>
                       </li>
                     </ul>
@@ -313,36 +272,45 @@ const Contact = () => {
                 <Card>
                   <CardHeader>
                     <CardTitle className="text-xl text-primary-800">
-                      Perguntas Frequentes
+                      Por que escolher a Busca Local Pro?
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">
-                        Vocês atendem apenas em Guarulhos?
-                      </h4>
-                      <p className="text-gray-600 text-sm">
-                        Atendemos Guarulhos e toda a região metropolitana de São Paulo, 
-                        com expertise especial no mercado local de Guarulhos.
-                      </p>
+                    <div className="flex items-start space-x-3">
+                      <Star className="h-5 w-5 text-accent-500 mt-1" />
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-1">
+                          Especialistas Locais em Guarulhos
+                        </h4>
+                        <p className="text-gray-600 text-sm">
+                          Conhecemos o mercado local e sabemos exatamente como melhorar sua empresa 
+                          no Google para atrair clientes da região.
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">
-                        Quanto tempo leva para ver resultados?
-                      </h4>
-                      <p className="text-gray-600 text-sm">
-                        Com nossa expertise local, os primeiros resultados aparecem entre 15-30 dias. 
-                        Resultados significativos em 60-90 dias.
-                      </p>
+                    <div className="flex items-start space-x-3">
+                      <Clock className="h-5 w-5 text-accent-500 mt-1" />
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-1">
+                          Resultados em 15-30 dias
+                        </h4>
+                        <p className="text-gray-600 text-sm">
+                          Nossa metodologia comprovada garante que você veja melhorias no Google 
+                          em poucos dias, com resultados significativos em até 90 dias.
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">
-                        Fazem atendimento presencial?
-                      </h4>
-                      <p className="text-gray-600 text-sm">
-                        Sim! Nosso escritório fica em Guarulhos e oferecemos reuniões presenciais 
-                        para alinhamento estratégico e acompanhamento.
-                      </p>
+                    <div className="flex items-start space-x-3">
+                      <Award className="h-5 w-5 text-accent-500 mt-1" />
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-1">
+                          Atendimento Presencial
+                        </h4>
+                        <p className="text-gray-600 text-sm">
+                          Nosso escritório fica em Guarulhos. Oferecemos reuniões presenciais 
+                          para alinhamento e acompanhamento personalizado.
+                        </p>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -351,12 +319,12 @@ const Contact = () => {
                 <Card className="bg-gray-50">
                   <CardContent className="p-6 text-center">
                     <h4 className="font-semibold text-gray-900 mb-4">
-                      Especialistas Locais de Guarulhos
+                      Busca Local Pro Agência de SEO - Guarulhos
                     </h4>
                     <div className="grid grid-cols-2 gap-4 text-sm">
                       <div>
                         <div className="text-2xl font-bold text-primary-800 mb-1">500+</div>
-                        <p className="text-gray-600">Clientes Atendidos</p>
+                        <p className="text-gray-600">Empresas Melhoradas no Google</p>
                       </div>
                       <div>
                         <div className="text-2xl font-bold text-primary-800 mb-1">5+</div>
@@ -367,7 +335,7 @@ const Contact = () => {
                         <p className="text-gray-600">Taxa de Sucesso</p>
                       </div>
                       <div>
-                        <div className="text-2xl font-bold text-primary-800 mb-1">24h</div>
+                        <div className="text-2xl font-bold text-primary-800 mb-1">2h</div>
                         <p className="text-gray-600">Tempo de Resposta</p>
                       </div>
                     </div>

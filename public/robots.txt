@@ -1,14 +1,30 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
 
 User-agent: *
 Allow: /
+
+# Sitemap location
+Sitemap: https://buscalocalpro.com.br/sitemap.xml
+
+# Disallow admin areas (if any)
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /api/
+
+# Allow important pages for SEO
+Allow: /
+Allow: /servicos
+Allow: /sobre
+Allow: /contato
+
+# Crawl delay for better server performance
+Crawl-delay: 1
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
