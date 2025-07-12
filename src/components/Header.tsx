@@ -9,15 +9,27 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
+      {/* Top Bar with Company Name */}
+      <div className="bg-white border-b border-gray-100">
+        <div className="container mx-auto px-4">
+          <div className="py-2 text-center">
+            <h1 className="text-sm md:text-base font-semibold text-primary-800">
+              Agência de Marketing Digital Especializada em SEO - Guarulhos SP
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Header */}
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center space-x-3">
+        <div className="flex items-center justify-between h-24">
+          <Link to="/" className="flex items-center space-x-4">
             <img 
               src="/lovable-uploads/f5ba5ef1-9386-4094-b72d-86626a07794a.png" 
               alt="Busca Local Pro - SEO Local em Guarulhos" 
-              className="h-16 w-auto"
+              className="h-20 w-auto"
             />
-            <span className="text-2xl font-bold text-primary-800">
+            <span className="text-2xl md:text-3xl font-bold text-primary-800">
               Busca Local Pro
             </span>
           </Link>
